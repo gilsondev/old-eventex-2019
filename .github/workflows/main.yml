@@ -38,3 +38,12 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "eventex-gilsondev"
         heroku_email: "me@gilsondev.in"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy Application
+      uses: akhileshns/heroku-deploy@v3.6.8
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "eventex-gilsondev"
+        heroku_email: "me@gilsondev.in"
